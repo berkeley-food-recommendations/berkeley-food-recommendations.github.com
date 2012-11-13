@@ -1,0 +1,174 @@
+/**
+ * This is a stylesheet for a midsemester project presentation.
+ */
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+
+/**
+ * Berkeley Food Recommendations
+ */
+
+body {
+  min-height: 740px;
+
+  /* fallback */
+  background-color: #ccc;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  /* TODO(helen): Pick better colours!! */
+
+  /* Safari 4-5, Chrome 1-9 */
+  /* Can't specify a percentage size? Laaaaaame. */
+  background: -webkit-gradient(radial, center center, 0, center center, 1000, from(#eee), to(#999));
+
+  /* Safari 5.1+, Chrome 10+ */
+  background: -webkit-radial-gradient(circle, #eee, #999);
+
+  /* Firefox 3.6+ */
+  background: -moz-radial-gradient(circle, #eee, #999);
+
+  /* IE 10 */
+  background: -ms-radial-gradient(circle, #eee, #999);
+
+  -webkit-font-smoothing: antialiased;
+}
+
+.fallback-message {
+  display: none;
+}
+
+.impress-not-supported .fallback-message {
+  display: inherit;
+}
+
+.step {
+  position: relative;
+  width: 900px;
+  padding: 40px;
+  margin: 0 auto 20px auto;
+
+  font-size: 64px;
+  line-height: 1.5;
+
+  font-family: 'PT Sans', 'sans-serif';
+
+  text-align: center;
+}
+
+.detail, .step.detail {
+  font-size: 36px;
+  text-align: left;
+}
+
+.bullets {
+  list-style: circle;
+}
+
+ul ul {
+  list-style: inside;
+}
+
+h1 {
+  font-size: 65px;
+  font-weight: bold;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+h1.title {
+  font-size: 90px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.ralign {
+  text-align: center;
+}
+
+em.authors {
+  font-size: 24px;
+}
+
+em.ralign {
+  float: right;
+}
+
+.enlarge {
+  display: inline-block;
+  font-weight: bold;
+}
+
+.past .enlarge,
+.future .enlarge {
+  font-size: inherit;
+}
+
+.present .enlarge {
+  -webkit-transition: font-size 4s;
+  -moz-transition:    font-size 4s;
+  -ms-transition:     font-size 4s;
+  -o-transition:      font-size 4s;
+  transition:         font-size 4s;
+
+  -webkit-transition-delay: 0.5s;
+  -moz-transition-delay:    0.5s;
+  -ms-transition-delay:     0.5s;
+  -o-transition-delay:      0.5s;
+  transition-delay:         0.5s;
+
+  font-size: 24px;
+}
+
+p {
+  margin: 10px auto;
+}
