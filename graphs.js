@@ -14,7 +14,7 @@ var y = d3.scale.linear()
 var xAxis = d3.svg.axis()
   .scale(x)
   .orient("bottom")
-  .ticks(10)
+  .ticks(20)
 
 var yAxis = d3.svg.axis()
     .scale(y)
@@ -28,7 +28,9 @@ var svg = d3.select("svg#hourly_volume")
 
 d3.tsv('/data/volume_by_hour.tsv', function(error, data) {
 
-  var dates = data.map(function(d) { return new Date(parseInt(d.hour) * 1000.0); })
+  var now = new Date();
+  var offset = (now.getTimezoneOffset() * 60000);
+  var dates = data.map(function(d) { return new Date(parseInt(d.hour) * 1000.0 - offset); })
   console.log(dates);
 
   x.domain([d3.min(dates), d3.max(dates)]);
@@ -53,7 +55,7 @@ d3.tsv('/data/volume_by_hour.tsv', function(error, data) {
       .data(data)
     .enter().append("rect")
       .attr("class", "bar")
-      .attr("x", function(d) { return x(new Date(parseInt(d.hour) * 1000.0)); })
+      .attr("x", function(d) { return x(new Date(parseInt(d.hour) * 1000.0 - offset)); })
       .attr("width", '2')
       .attr("y", function(d) { return y(d.count); })
       .attr("height", function(d) { return height - y(d.count); });
