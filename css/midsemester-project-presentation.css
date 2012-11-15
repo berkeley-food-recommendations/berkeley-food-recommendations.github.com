@@ -65,16 +65,16 @@ body {
 
   /* Safari 4-5, Chrome 1-9 */
   /* Can't specify a percentage size? Laaaaaame. */
-  background: -webkit-gradient(radial, center center, 0, center center, 1000, from(#eee), to(#999));
+  background: -webkit-gradient(radial, center center, 0, center center, 1000, from(#fefefe), to(#999));
 
   /* Safari 5.1+, Chrome 10+ */
-  background: -webkit-radial-gradient(circle, #eee, #999);
+  background: -webkit-radial-gradient(circle, #fefefe, #999);
 
   /* Firefox 3.6+ */
-  background: -moz-radial-gradient(circle, #eee, #999);
+  background: -moz-radial-gradient(circle, #fefefe, #999);
 
   /* IE 10 */
-  background: -ms-radial-gradient(circle, #eee, #999);
+  background: -ms-radial-gradient(circle, #fefefe, #999);
 
   -webkit-font-smoothing: antialiased;
 }
@@ -125,6 +125,10 @@ h2 {
 
 h1.title {
   font-size: 90px;
+}
+
+strong {
+  font-weight: bold;
 }
 
 a {
